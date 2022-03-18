@@ -42,13 +42,13 @@ def main(method, time, time_unit = ""):
 
     if method == "-s":
         if time_unit == "-h":
-            os.system('shutdown /r /t {}'.format(hours_to_seconds(time)))
+            os.system('shutdown /s /t {}'.format(hours_to_seconds(time)))
             print("shutdown in {} hour".format(time))
         elif time_unit == "-m":
-            os.system('shutdown /r /t {}'.format(minutes_to_seconds(time)))
+            os.system('shutdown /s /t {}'.format(minutes_to_seconds(time)))
             print("shutdown in {} minutes".format(time))
         elif time_unit == "":
-            os.system('shutdown /r /t {}'.format(time))
+            os.system('shutdown /s /t {}'.format(time))
             print("shutdown in {} seconds".format(time))
 
 if __name__ == '__main__':
